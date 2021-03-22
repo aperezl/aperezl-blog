@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function ArticleHome({ title, excerpt, image, slug } = {}) {
   return (
-    <article className="border-t border-cw-grey-100 flex justify-between py-8">
+    <article className="flex justify-between py-8">
       <div className="w-1/2 mr-12">
         <Link Link as={`/posts/${slug}`} href="/posts/[slug]">
           <img className="border-sm rounded-md cursor-pointer" src={image} alt="image1" />
