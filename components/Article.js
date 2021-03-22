@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Article = ({ image }) => {
+const Article = ({ title, image, excerpt }) => {
   return (
     <article>
       <a href="#">
@@ -11,11 +11,11 @@ const Article = ({ image }) => {
       </a>
       <h2>
         <a href="#" className="font-bold font-work-sans text-xl text-cw-grey-900 hover:text-cw-blue-600">
-          Laborum ullamco nostrud nisi ad nostrud fugiat elit
+          {title}
         </a>
       </h2>
       <p className="text-sm leading-loose">
-        Sint est exercitation commodo excepteur ea nostrud labore nulla Lorem velit eiusmod dolor minim.
+        {excerpt}
       </p>
     </article>
   )
