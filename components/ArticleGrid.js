@@ -10,7 +10,6 @@ const ArticleGrid = ({ posts }) => {
         return <Article
           key={slug}
           title={title}
-          excerpt={excerpt}
           image={coverImage}
         />  
       }

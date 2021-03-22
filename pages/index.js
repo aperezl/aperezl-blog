@@ -17,6 +17,7 @@ export default function Home({ allPosts }) {
           title={heroPost.title}
           excerpt={heroPost.excerpt}
           image={heroPost.coverImage}
+          slug={heroPost.slug}
         />
         <ArticleGrid posts={morePosts} />
       </main>

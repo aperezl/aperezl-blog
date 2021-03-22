@@ -1,19 +1,21 @@
-import React from 'react'
+import Link from 'next/link'
 
-function ArticleHome({ title, excerpt, image } = {}) {
+function ArticleHome({ title, excerpt, image, slug } = {}) {
   return (
     <article className="border-t border-cw-grey-100 flex justify-between py-8">
-      <a href="#" className="w-1/2 mr-12">
-        <img className="border-sm rounded-md" src={image} alt="image1" />
-      </a>
+      <div className="w-1/2 mr-12">
+        <Link Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <img className="border-sm rounded-md cursor-pointer" src={image} alt="image1" />
+        </Link>
+      </div>
       <div className="w-1/2">
         <a href="#" className="text-cw-blue-300 hover:text-cw-blue-600 hover:underline text-sm mb-1 block">
           Vanilla
         </a>
-        <h1>
-          <a href="#" className="font-bold font-work-sans text-3xl text-cw-grey-800 hover:text-cw-blue-600 leading-tight mb-3">
+        <h1 className="font-bold font-work-sans text-3xl text-cw-grey-800 hover:text-cw-blue-600 leading-tight mb-3">
+          <Link Link as={`/posts/${slug}`} href="/posts/[slug]">
             { title }
-          </a>
+          </Link>
         </h1>
         <p>
           { excerpt }

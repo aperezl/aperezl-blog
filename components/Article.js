@@ -14,9 +14,7 @@ const Article = ({ title, image, excerpt }) => {
           {title}
         </a>
       </h2>
-      <p className="text-sm leading-loose">
-        {excerpt}
-      </p>
+
     </article>
   )
 }
