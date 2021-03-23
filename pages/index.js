@@ -39,7 +39,8 @@ export async function getStaticProps() {
     'coverImage',
     'excerpt',
     'category',
-    'tags'
+    'tags',
+    'featured',
   ])
   
   return {
