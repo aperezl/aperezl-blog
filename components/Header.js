@@ -7,7 +7,6 @@ const Header = () => {
       <div className="container mx-auto max-w-6xl px-5 flex justify-between h-12 py-10">
         <Link Link as={`/`} href="/">
           <div className="flex justify-between items-center cursor-pointer">
-            <img src="/avatar.png" alt="Avatar Logo" className="h-12 rounded-full" />
             <span className="px-2 font-bold fond-work-sans text-2xl text-cw-grey-050">aperezl</span>
           </div>
         </Link>

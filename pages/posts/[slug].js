@@ -20,7 +20,7 @@ export default function Post({ post }) {
             <h1 className="font-bold font-work-sans text-3xl text-cw-grey-800 leading-tight mb-3">
               {post.title}
             </h1>
-              <img className="border-sm rounded-md" src={post.coverImage} alt="image1" />
+              <img className="border-sm rounded-md" src={`/posts/${post.slug}/${post.coverImage}`} alt="image1" />
               <ArticleBody content={post.content} />
             </article>
           </div>
