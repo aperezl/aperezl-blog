@@ -1,4 +1,9 @@
 import React from 'react'
+import Twitter from './socialIcons/Twitter.js'
+import GitHub from './socialIcons/GitHub.js'
+import Youtube from './socialIcons/Youtube.js'
+
+
 
 const Hero = () => {
   return (
@@ -18,6 +23,11 @@ const Hero = () => {
         <div className="w-1/3">
           <div className="bg-cw-grey-050 p-1 rounded-full">
             <img src="/avatar.png" alt="Avatar Logo" className="align-middle rounded-full" />
+          </div>
+          <div className="my-4 flex justify-center space-x-4">
+            <Twitter />
+            <GitHub />
+            <Youtube />
           </div>
         </div>  
       </div>
