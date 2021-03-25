@@ -7,7 +7,6 @@ import Hero from "../components/Hero";
 import { getAllPosts } from '../lib/api'
 
 export default function Home({ allPosts }) {
-  console.log(allPosts)
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
  
@@ -30,7 +29,6 @@ export default function Home({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  console.log('xxxx')
   const allPosts = getAllPosts([
     'title',
     'date',
