@@ -1,4 +1,3 @@
-import Article from "../components/Article";
 import ArticleGrid from "../components/ArticleGrid";
 import ArticleHome from "../components/ArticleHome";
 import Header from "../components/Header";

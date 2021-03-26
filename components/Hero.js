@@ -17,7 +17,7 @@ const Hero = () => {
             Javascript Developer.  
           </h2>
           <p className="font-work-sans text-cw-grey-100 mt-4">
-            Mi Bio aquí
+            Mi Bio aquí. {`¯ \ _ (ツ) _ / ¯`}
           </p>
         </div>
         <div className="w-1/3">

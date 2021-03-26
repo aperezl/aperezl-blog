@@ -18,8 +18,8 @@ const Header = () => {
   
           </li>
           <li className="mr-10">
-            <Link Link as={`/`} href="/">
-              Tags
+            <Link Link as={`/posts`} href="/posts">
+              Blog
             </Link>
           </li>
           <li className="mr-10">
