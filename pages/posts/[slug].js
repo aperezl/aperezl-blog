@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import ArticleBody from '../../components/ArticleBody'
+import Bio from '../../components/Bio'
 import Header from '../../components/Header'
 import { getAllPosts, getPostBySlug } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -13,19 +14,18 @@ export default function Post({ post }) {
       
 
       <main className="container mx-auto max-w-6xl px-5">
-
-      <div className="mr-12 flex justify-between py-8">
+        <h1 className="font-bold font-work-sans text-4xl text-cw-grey-800 leading-tight my-4">
+          {post.title}
+        </h1>
+        <div className="flex justify-between py-8">
           <div className="w-3/4">
-            <article className="mb-32">
-            <h1 className="font-bold font-work-sans text-3xl text-cw-grey-800 leading-tight mb-3">
-              {post.title}
-            </h1>
+            <article className="mb-32">          
               <img className="border-sm rounded-md" src={`/posts/${post.slug}/${post.coverImage}`} alt="image1" />
               <ArticleBody content={post.content} />
             </article>
           </div>
           <div className="w-1/4">
-            ---
+            <Bio />
           </div>
         </div>
       </main>

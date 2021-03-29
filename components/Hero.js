@@ -3,8 +3,6 @@ import Twitter from './socialIcons/Twitter.js'
 import GitHub from './socialIcons/GitHub.js'
 import Youtube from './socialIcons/Youtube.js'
 
-
-
 const Hero = () => {
   return (
     <section className="bg-cw-grey-800 py-20">
@@ -25,9 +23,9 @@ const Hero = () => {
             <img src="/avatar.png" alt="Avatar Logo" className="align-middle rounded-full" />
           </div>
           <div className="my-4 flex justify-center space-x-4">
-            <Twitter />
-            <GitHub />
-            <Youtube />
+            <Twitter link="_aperezl" />
+            <GitHub link="aperezl" />
+            <Youtube link="aperezl" />
           </div>
         </div>  
       </div>
