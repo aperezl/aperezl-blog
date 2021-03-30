@@ -12,7 +12,7 @@ const Hero = () => {
           <h2 className="text-4xl font-work-sans text-cw-grey-100 leading-snug">
             ¡Hola!, <br />
             Soy <span className="bg-cw-grey-100 text-cw-grey-800 rounded px-1">Antonio Pérez</span>.<br />
-            Javascript Developer.  
+            <span className="text-2xl">Javascript Developer.</span>
           </h2>
           <p className="font-work-sans text-cw-grey-100 mt-4">
             Mi Bio aquí. {`¯ \ _ (ツ) _ / ¯`}

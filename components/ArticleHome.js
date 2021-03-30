@@ -12,9 +12,11 @@ function ArticleHome({ title, excerpt, image, slug, category, date } = {}) {
       </div>
       <div className="w-1/2">
         <div className="text-cw-grey-700 text-sm mb-1">
-          <a href="#" className="hover:text-cw-blue-600 font-bold">
-            {category}
-          </a>
+          <span className="hover:text-cw-blue-600 font-bold">
+            <Link as={`/tags/${category}`} href="/tags/[tag]">
+              {category}
+            </Link>
+          </span>
           <p className="font-work-sans text-cw-grey-700 inline"> / { new Date(date).toLocaleDateString('es-ES', options) }</p>
         </div>
         
