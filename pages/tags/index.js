@@ -1,10 +1,9 @@
+import Link from 'next/link'
 import Header from "../../components/Header";
 import Bio from '../../components/Bio'
-import { getAllPosts } from '../../lib/api'
-import PostList from "../../components/PostList";
+import { getAllTags } from '../../lib/api'
 
-export default function Home({ allPosts }) {
-  console.log(allPosts)
+export default function Home({ allTags }) {
 
   return (
     <>
@@ -12,7 +11,16 @@ export default function Home({ allPosts }) {
       <main className="container mx-auto max-w-6xl px-5">
         <div className="mr-12 flex justify-between py-8">
           <div className="w-3/4">
-            poner aquí los tags
+            {
+              allTags.map(tag => (
+                <Link
+                  key={tag}
+                  as={`/tags/${tag}`}
+                  href="/tags/[tag]">
+                  {tag}
+                </Link>
+              ))
+            }
           </div>
           <div className="w-1/4">
             <Bio />
@@ -26,19 +34,9 @@ export default function Home({ allPosts }) {
 
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-    'category',
-    'tags',
-    'featured',
-  ])
-  
+  const allTags = getAllTags(['tag'])
+  console.log('allTags', allTags)
   return {
-    props: { allPosts },
+    props: { allTags },
   }
 }

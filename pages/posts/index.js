@@ -4,7 +4,6 @@ import { getAllPosts } from '../../lib/api'
 import PostList from "../../components/PostList";
 
 export default function Home({ allPosts }) {
-  console.log(allPosts)
 
   return (
     <>

@@ -1,9 +1,9 @@
 import Header from "../../components/Header";
 import Bio from '../../components/Bio'
-import { getAllPosts } from '../../lib/api'
+import PostList from "../../components/PostList"
+import { getAllTags, getAllPostsByTag } from '../../lib/api'
 
 export default function Home({ allPosts }) {
-  console.log(allPosts)
 
   return (
     <>
@@ -11,7 +11,7 @@ export default function Home({ allPosts }) {
       <main className="container mx-auto max-w-6xl px-5">
         <div className="mr-12 flex justify-between py-8">
           <div className="w-3/4">
-            poner aquí todos los artículos del mismo tag
+            <PostList posts={allPosts} /> 
           </div>
           <div className="w-1/4">
             <Bio />
@@ -24,8 +24,8 @@ export default function Home({ allPosts }) {
 }
 
 
-export async function getStaticProps() {
-  const allPosts = getAllPosts([
+export async function getStaticProps({ params }) {
+  const allPosts = getAllPostsByTag(params.tag, [
     'title',
     'date',
     'slug',
@@ -39,5 +39,19 @@ export async function getStaticProps() {
   
   return {
     props: { allPosts },
+  }
+}
+
+export async function getStaticPaths() {
+  const tags = getAllTags(['tag'])
+  return {
+    paths: tags.map(tag => {
+      return {
+        params: {
+          tag
+        }
+      }
+    }),
+    fallback: false
   }
 }
