@@ -16,6 +16,7 @@ export default function Home({ allPosts }) {
       <main className="container mx-auto max-w-6xl px-5">
         <ArticleHome
           title={heroPost.title}
+          date={heroPost.date}
           excerpt={heroPost.excerpt}
           image={heroPost.coverImage}
           slug={heroPost.slug}

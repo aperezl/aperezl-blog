@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-const Article = ({ title, image, excerpt, slug, category }) => {
+const Article = ({ title, image, excerpt, slug, category, date }) => {
   return (
     <article>
       <Link Link as={`/posts/${slug}`} href="/posts/[slug]">
@@ -15,7 +16,7 @@ const Article = ({ title, image, excerpt, slug, category }) => {
           {title}
         </Link>
       </h2>
-
+      <p className="font-work-sans text-md text-cw-grey-700 mb-2">{ new Date(date).toLocaleDateString('es-ES', options) }</p>
     </article>
   )
 }
