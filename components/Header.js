@@ -23,6 +23,11 @@ const Header = () => {
             </Link>
           </li>
           <li className="mr-10">
+            <Link Link as={`/tags`} href="/tags">
+              Tags
+            </Link>
+          </li>
+          <li className="mr-10">
             <Link Link as={`/`} href="/">
               Sobre mi
             </Link>

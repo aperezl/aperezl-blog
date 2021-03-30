@@ -12,7 +12,7 @@ export default function Home({ allPosts }) {
       <main className="container mx-auto max-w-6xl px-5">
         <div className="mr-12 flex justify-between py-8">
           <div className="w-3/4">
-            <PostList posts={allPosts} /> 
+            poner aquí los tags
           </div>
           <div className="w-1/4">
             <Bio />
