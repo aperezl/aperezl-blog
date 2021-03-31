@@ -4,7 +4,7 @@ function ArticleHome({ title, excerpt, image, slug, category, date } = {}) {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
-    <article className="flex justify-between py-8">
+    <article className="flex justify-between p-4 mt-4 bg-cw-grey-100 rounded-md">
       <div className="w-1/2 mr-12">
         <Link Link as={`/posts/${slug}`} href="/posts/[slug]">
           <img className="border-sm rounded-md cursor-pointer" src={`/posts/${slug}/${image}`} alt="image1" />
