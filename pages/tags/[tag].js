@@ -2,24 +2,14 @@ import Header from "../../components/Header";
 import Bio from '../../components/Bio'
 import PostList from "../../components/PostList"
 import { getAllTags, getAllPostsByTag } from '../../lib/api'
+import PageLayout from "../../components/Layouts/PageLayout";
 
 export default function Home({ allPosts }) {
 
   return (
-    <>
-      <Header />
-      <main className="container mx-auto max-w-6xl px-5">
-        <div className="mr-12 flex justify-between py-8">
-          <div className="w-3/4">
-            <PostList posts={allPosts} /> 
-          </div>
-          <div className="w-1/4">
-            <Bio />
-          </div>
-        </div>
-
-      </main>
-    </>
+    <PageLayout>
+      <PostList posts={allPosts} /> 
+    </PageLayout>
   )
 }
 
