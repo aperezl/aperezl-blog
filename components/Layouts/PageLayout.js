@@ -1,5 +1,6 @@
 import Header from "../Header";
 import Bio from '../Bio'
+import Footer from "../Footer";
 
 export default function PageLayout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function PageLayout({ children }) {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

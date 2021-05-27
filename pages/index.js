@@ -3,6 +3,7 @@ import ArticleHome from "../components/ArticleHome";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import HomeLayout from "../components/Layouts/HomeLayout";
 
 import { getAllPosts } from '../lib/api'
 
@@ -11,10 +12,8 @@ export default function Home({ allPosts }) {
   const morePosts = allPosts.slice(1)
  
   return (
-    <>
-      <Header />
-      <Hero />
-      <main className="container mx-auto max-w-6xl px-5">
+    <HomeLayout>
+      
         <ArticleHome
           title={heroPost.title}
           date={heroPost.date}
@@ -24,9 +23,7 @@ export default function Home({ allPosts }) {
           category={heroPost.category}
         />
         <ArticleGrid posts={morePosts} />
-      </main>
-      <Footer />
-    </>
+    </HomeLayout>
   )
 }
 
