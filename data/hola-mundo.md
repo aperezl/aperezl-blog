@@ -1,5 +1,5 @@
 ---
-title: 'console.log("Hola mundo!");'
+title: 'console.log("Hola mundo!!");'
 excerpt: 'Aquí iría la presentación del primer artículo.'
 coverImage: 'image1.jpg'
 date: '2021-03-16T05:35:07.322Z'
